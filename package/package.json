@@ -1,6 +1,6 @@
 {
   "name": "@warrenbhw/solid-ag-grid",
-  "version": "31.1.1",
+  "version": "31.1.2",
   "description": "AG Grid SolidJS Component",
   "license": "MIT",
   "author": "Ben Warren <ben@snowpilot.com>",
