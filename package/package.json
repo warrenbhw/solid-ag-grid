@@ -13,14 +13,17 @@
     "url": "https://github.com/warrenbhw/solid-ag-grid/issues"
   },
   "type": "module",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
+  "main": "./dist/solid-ag-grid.umd.js",
+  "module": "./dist/solid-ag-grid.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/solid-ag-grid.es.js",
+      "require": "./dist/solid-ag-grid.umd.js"
+    }
+  },
   "scripts": {
-    "build": "bun build ./src/index.tsx --outdir ./dist --target node",
+    "build": "vite build",
     "build:types": "tsc --emitDeclarationOnly",
     "build:all": "bun run build && bun run build:types"
   },
@@ -32,6 +35,7 @@
     "@ag-grid-community/core": "~31.1.1",
     "solid-js": ">=1.0.0",
     "typescript": "^5.4.4",
-    "bun-types": "latest"
+    "vite": "^5.0.0",
+    "vite-plugin-solid": "^2.8.0"
   }
 }
